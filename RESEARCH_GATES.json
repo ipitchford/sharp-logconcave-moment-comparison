@@ -1,0 +1,227 @@
+{
+  "schemaVersion": "1.0",
+  "recordDate": "2026-10-15",
+  "recordType": "retrospective-publication-intake-reconstruction",
+  "provenance": "Prepared after manuscript development from current paper.tex, prior-art.md, SOURCES.md, the exact-version re-review and coordinating agent's fresh queries/full-section readback. Not backdated as a prospective discovery record. Completeness is not scientific validation or priority proof.",
+  "contributionMap": [
+    {
+      "claim": "Sharp variance-normalised Lp–L2 constants for remaining real p>1, with a unique transition between Laplace and centred exponential extremisers.",
+      "unit": "statement",
+      "paperLocation": "paper.tex thm:main; sec:assembly",
+      "searches": [
+        {
+          "date": "2026-10-15",
+          "query": "\"log-concave\" \"1.682457\" moments",
+          "corpus": "Public web search; query executed by coordinating agent at publication intake"
+        },
+        {
+          "date": "2026-10-15",
+          "query": "\"log-concave\" \"sharp\" \"Lp\" \"L2\" centred Eitan",
+          "corpus": "Public web search; query executed by coordinating agent at publication intake"
+        }
+      ],
+      "closestPriorWork": "MRTT arXiv:2505.00944v2 §3.1 conjectures the result and approximate transition; Eitan already proves the even-p>2 case.",
+      "verdict": "partially-known-cited"
+    },
+    {
+      "claim": "Complete equality classification: two families modulo scaling/reflection at p*, a single family in each open regime, every admissible law at p=2.",
+      "unit": "identification",
+      "paperLocation": "paper.tex thm:U; lem:S; sec:equality",
+      "searches": [
+        {
+          "date": "2026-10-15",
+          "query": "\"log-concave\" \"1.682457\" moments",
+          "corpus": "Public web search; query executed by coordinating agent at publication intake"
+        },
+        {
+          "date": "2026-10-15",
+          "query": "\"log-concave\" \"sharp\" \"Lp\" \"L2\" centred Eitan",
+          "corpus": "Public web search; query executed by coordinating agent at publication intake"
+        }
+      ],
+      "closestPriorWork": "Eitan arXiv §3 Theorems 12/14 and proof of Theorem 4 contain reduction and equality reasoning; present complete classification uses the remaining strict real-exponent optimisation.",
+      "verdict": "new-in-bounded-search"
+    },
+    {
+      "claim": "Self-contained equality-sensitive real-exponent reduction to Z_s using crossing patterns and a Chebyshev system.",
+      "unit": "proof",
+      "paperLocation": "paper.tex sec:selfred; thm:R2; thm:R1; Lemmas A–G",
+      "searches": [
+        {
+          "date": "2026-10-15",
+          "query": "\"log-concave\" \"sharp\" \"Lp\" \"L2\" centred Eitan",
+          "corpus": "Public web search; query executed by coordinating agent at publication intake"
+        }
+      ],
+      "closestPriorWork": "Eitan arXiv:2110.14382 §3 and Eskenazis–Nayar–Tkocz crossing-method antecedents. Neither real-exponent scope nor general method is new.",
+      "verdict": "known-cited"
+    },
+    {
+      "claim": "Analytic large-p bound and regional interval certification of reduced moment gaps, with derivative treatment at degenerate boundaries.",
+      "unit": "method",
+      "paperLocation": "paper.tex sec:largep, sec:local, sec:strip, sec:bulk",
+      "searches": [
+        {
+          "date": "2026-10-15",
+          "query": "\"log-concave\" \"1.682457\" moments",
+          "corpus": "Public web search; query executed by coordinating agent at publication intake"
+        },
+        {
+          "date": "2026-10-15",
+          "query": "\"log-concave\" \"sharp\" \"Lp\" \"L2\" centred Eitan",
+          "corpus": "Public web search; query executed by coordinating agent at publication intake"
+        }
+      ],
+      "closestPriorWork": "Known reduction/crossing methods and Arb ball arithmetic; bespoke optimisation and region assembly for this conjecture. No new interval arithmetic or generic reduction method claimed.",
+      "verdict": "partially-known-cited"
+    },
+    {
+      "claim": "Fixed-p qualitative TV and Wq stability, q finite and at least one, with a common modulus on compact subsets of one open exponent regime.",
+      "unit": "statement",
+      "paperLocation": "paper.tex sec:stability; cor:distributional-stability",
+      "searches": [
+        {
+          "date": "2026-10-15",
+          "query": "log concave weak convergence total variation Cule Samworth Proposition 2 stability moments",
+          "corpus": "Public web search; query executed by coordinating agent at publication intake"
+        }
+      ],
+      "closestPriorWork": "Standard compactness plus equality; Cule–Samworth Proposition 2 and Saumard–Wellner closure/marginalisation/density facts supply convergence machinery.",
+      "verdict": "partially-known-cited"
+    },
+    {
+      "claim": "Uniform exponential tails, weak compactness and equality classification imply qualitative convergence to the extremal set.",
+      "unit": "method",
+      "paperLocation": "paper.tex proof of cor:distributional-stability",
+      "searches": [
+        {
+          "date": "2026-10-15",
+          "query": "log concave weak convergence total variation Cule Samworth Proposition 2 stability moments",
+          "corpus": "Public web search; query executed by coordinating agent at publication intake"
+        }
+      ],
+      "closestPriorWork": "Saumard–Wellner Theorem 3.3, Proposition 3.6, Theorem 2.7; Cule–Samworth Proposition 2. Standard compactness consequence, not new general stability machinery.",
+      "verdict": "known-cited"
+    }
+  ],
+  "sourcesReadInFull": [
+    {
+      "citation": "Melbourne–Roysdon–Tang–Tkocz, From simplex slicing to sharp reverse Hölder inequalities, arXiv:2505.00944v2",
+      "usedFor": "Exact problem and prior conjecture/phase-transition attribution",
+      "readWhat": "Full §3.1 problem/conjecture passage, including centred class, variance normalisation and directions below/above two.",
+      "date": "2026-10-15",
+      "evidenceLocator": "https://arxiv.org/html/2505.00944v2 ; §3.1",
+      "readingProvenance": "Full-text sections read by coordinating agent; this record reconstructs that reported intake reading, not a new claim of published-full-text inspection by the documentation agent."
+    },
+    {
+      "citation": "Eitan, The centered convex body whose marginals have the heaviest tails, arXiv:2110.14382",
+      "usedFor": "Inherited real-exponent reduction and existing equality information; even higher moments known",
+      "readWhat": "ArXiv §3, Theorems 12 and 14, and proof of Theorem 4. Published Studia full text was not inspected; published metadata/abstract is not substituted for that text.",
+      "date": "2026-10-15",
+      "evidenceLocator": "https://arxiv.org/pdf/2110.14382 ; §3, Theorems 12/14 and proof of Theorem 4",
+      "readingProvenance": "Full-text sections read by coordinating agent; this record reconstructs that reported intake reading, not a new claim of published-full-text inspection by the documentation agent."
+    },
+    {
+      "citation": "Cule–Samworth, Theoretical properties of the log-concave maximum likelihood estimator of a multidimensional density",
+      "usedFor": "Weak-to-total-variation convergence used in qualitative stability",
+      "readWhat": "Proposition 2 including limiting-density hypothesis; nondegenerate variance-one limit in manuscript verifies applicability, without requiring density continuity at support endpoints.",
+      "date": "2026-10-15",
+      "evidenceLocator": "https://arxiv.org/pdf/0908.4400 ; Proposition 2",
+      "readingProvenance": "Full-text sections read by coordinating agent; this record reconstructs that reported intake reading, not a new claim of published-full-text inspection by the documentation agent."
+    },
+    {
+      "citation": "Saumard–Wellner, Log-concavity and strong log-concavity: A review",
+      "usedFor": "Marginalisation, weak closure, and existence of density for nondegenerate limit",
+      "readWhat": "Theorem 3.3, Proposition 3.6 and Theorem 2.7, with hypotheses used to establish uniform tails and compactness of variance-one laws.",
+      "date": "2026-10-15",
+      "evidenceLocator": "https://arxiv.org/pdf/1404.5886 ; Theorem 3.3, Proposition 3.6, Theorem 2.7",
+      "readingProvenance": "Full-text sections read by coordinating agent; this record reconstructs that reported intake reading, not a new claim of published-full-text inspection by the documentation agent."
+    }
+  ],
+  "limitationTriage": [
+    {
+      "limitation": "Previously only reduced-parameter stability, not a distributional consequence.",
+      "closingQuestion": "Does standard log-concave compactness plus the equality classification give TV and finite Wq convergence?",
+      "triedOrSearched": "Read Cule–Samworth Proposition 2 and Saumard–Wellner facts; proved uniform tails, preservation of variance, moment convergence, TV/Wq convergence and compact-single-regime uniformity in sec:stability.",
+      "estimatedCost": "Bounded extension completed; no reliable prospective hours or compute-cost estimate retained.",
+      "cheap": false,
+      "decision": "CLOSED",
+      "reasonOpen": "",
+      "whyNotClosedNow": ""
+    },
+    {
+      "limitation": "No explicit quantitative deficit-to-distance rate.",
+      "closingQuestion": "Does the reduced quadratic parameter gap control distance between arbitrary original laws?",
+      "triedOrSearched": "Inspected reduction/equality and compactness proof; it supplies existence of a modulus but no quantitative comparison between original law and matching Z_s.",
+      "estimatedCost": "Unestimated beyond the bounded extension; no numerical cost estimate is asserted.",
+      "cheap": false,
+      "decision": "OPEN",
+      "reasonOpen": "A quantitative reduction or new stability inequality is needed; a parameter-space quadratic gap cannot be relabelled a distributional rate.",
+      "whyNotClosedNow": "A quantitative reduction or new stability inequality is needed; a parameter-space quadratic gap cannot be relabelled a distributional rate."
+    },
+    {
+      "limitation": "No uniform modulus through p* or p=2 for exact exponent-dependent equality sets.",
+      "closingQuestion": "Could compact-exponent uniformity be extended through these boundaries?",
+      "triedOrSearched": "Manuscript tests a centred exponential as p approaches p* from below and a Gaussian as p approaches 2.",
+      "estimatedCost": "Bounded extension completed; no reliable prospective hours or compute-cost estimate retained.",
+      "cheap": false,
+      "decision": "CLOSED",
+      "reasonOpen": "Requested extension is excluded by explicit counterexamples; only fixed-p and compact-single-regime claims remain.",
+      "whyNotClosedNow": ""
+    },
+    {
+      "limitation": "General sharp two-exponent moment optimisation remains open.",
+      "closingQuestion": "Does Eitan's reduction or the variance-normalised proof solve arbitrary 1<a<b?",
+      "triedOrSearched": "Compared Eitan reduction and conjecture with the specialised reduced G(s,p); no global two-exponent optimisation was supplied.",
+      "estimatedCost": "Unestimated beyond the bounded extension; no numerical cost estimate is asserted.",
+      "cheap": false,
+      "decision": "OPEN",
+      "reasonOpen": "Reduction does not identify the optimiser for arbitrary exponent pairs; this needs further mathematical work outside the completed target.",
+      "whyNotClosedNow": "Reduction does not identify the optimiser for arbitrary exponent pairs; this needs further mathematical work outside the completed target."
+    },
+    {
+      "limitation": "No formal verification or unaffiliated external peer review.",
+      "closingQuestion": "Can replay or the coordinated re-review establish formal proof or external review?",
+      "triedOrSearched": "Separated source-bound interval replay, proof reconstruction, model-assisted review and library trust in ASSURANCE and re-review.",
+      "estimatedCost": "Unestimated beyond the bounded extension; no numerical cost estimate is asserted.",
+      "cheap": false,
+      "decision": "OPEN",
+      "reasonOpen": "Same-code replay and internal assessment cannot supply a proof-assistant development, independent implementation or unaffiliated human review.",
+      "whyNotClosedNow": "Same-code replay and internal assessment cannot supply a proof-assistant development, independent implementation or unaffiliated human review."
+    },
+    {
+      "limitation": "No unconditional priority claim; published Eitan full proof uninspected.",
+      "closingQuestion": "Can bounded queries and arXiv reading establish first-proof priority?",
+      "triedOrSearched": "Executed three dated refresh queries above; read load-bearing arXiv sections and retained prior-art access limitations.",
+      "estimatedCost": "Unestimated beyond the bounded extension; no numerical cost estimate is asserted.",
+      "cheap": false,
+      "decision": "OPEN",
+      "reasonOpen": "Bounded negative search is not exhaustive priority evidence; published-full-text absence is not grounds to claim first written reduction.",
+      "whyNotClosedNow": "Bounded negative search is not exhaustive priority evidence; published-full-text absence is not grounds to claim first written reduction."
+    },
+    {
+      "limitation": "No claim that p* is irrational.",
+      "closingQuestion": "Does the certified root bracket establish irrationality?",
+      "triedOrSearched": "Checked distinction between unique root/enclosure and arithmetic classification.",
+      "estimatedCost": "Unestimated beyond the bounded extension; no numerical cost estimate is asserted.",
+      "cheap": false,
+      "decision": "OPEN",
+      "reasonOpen": "A finite rational enclosure cannot decide irrationality; arithmetic classification is not needed for the sharp inequality.",
+      "whyNotClosedNow": "A finite rational enclosure cannot decide irrationality; arithmetic classification is not needed for the sharp inequality."
+    }
+  ],
+  "extensionScout": {
+    "by": "Coordinating AI research/publication agent with scoped analytic checking; retrospective record",
+    "date": "2026-10-15",
+    "proposals": [
+      "Worked p=4 and p=3/2 examples",
+      "Qualitative stability in TV and finite Wq via existing compactness/convergence facts",
+      "Explicit rates or extension across exponent transitions"
+    ],
+    "actions": [
+      "Implemented examples with attribution of known fourth-moment case.",
+      "Implemented cor:distributional-stability and checked variance-normalised equality-set scope; standard consequence, not a new generic method.",
+      "Did not claim rates; exhibited obstructions to cross-transition uniformity and retained the general exponent-pair problem as open."
+    ]
+  }
+}
