@@ -1,0 +1,13 @@
+{
+  "title": "Sharp Lp–L2 moment comparison for centred log-concave random variables, with equality cases",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "description": "Unrefereed computer-assisted theorem candidate proving the Melbourne–Roysdon–Tang–Tkocz variance-normalised moment conjecture for centred real log-concave laws. The paper supplies an equality-sensitive exposition of Eitan's existing reduction, rigorous regional ball-arithmetic optimisation, a complete equality classification, and qualitative fixed-exponent total-variation/Wasserstein stability. All eleven production certificates replay internally in normal and optimized modes with semantic negative controls. No external peer review, independent reimplementation, formal verification, explicit distributional stability rate or solution of the general two-exponent optimisation is claimed. Original research prose/data are CC0-1.0 and code is MIT; third-party dependencies retain their licences.",
+  "creators": [{"name": "Anonymous"}],
+  "version": "1.0.0-candidate",
+  "publication_date": "2026-10-15",
+  "access_right": "open",
+  "license": "cc-zero",
+  "keywords": ["log-concave probability", "sharp moment inequalities", "computer-assisted proof", "equality cases", "qualitative stability"],
+  "related_identifiers": [{"identifier": "https://github.com/ipitchford/sharp-logconcave-moment-comparison", "relation": "isSupplementTo", "scheme": "url"}]
+}

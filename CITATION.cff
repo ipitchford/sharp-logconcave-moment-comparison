@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite the archived candidate, retaining its unrefereed status."
+title: "Sharp Lp–L2 moment comparison for centred log-concave random variables, with equality cases"
+authors:
+  - name: Anonymous
+version: 1.0.0-candidate
+date-released: 2026-10-15
+doi: 10.5281/zenodo.23405173
+url: https://evidencepress.org/releases/sharp-logconcave-moment-comparison/
+repository-code: https://github.com/ipitchford/sharp-logconcave-moment-comparison
+license: CC0-1.0

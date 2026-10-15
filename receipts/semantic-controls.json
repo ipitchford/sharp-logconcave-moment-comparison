@@ -1,0 +1,82 @@
+{
+  "kind": "portable-summary-of-actual-tests",
+  "regression_runs": [
+    {
+      "mode": "normal",
+      "returncode": 0,
+      "test_methods": 6,
+      "log_sha256": "5db44cb64e4b753e4e94e7bca75496f508f11868f70348b959c3644299d8a8f4"
+    },
+    {
+      "mode": "optimized",
+      "returncode": 0,
+      "test_methods": 6,
+      "log_sha256": "d8b83e783bb0104dd3152e9c3937ccf831ebd05090e8f3810d43790835b75022"
+    }
+  ],
+  "false_bulk_controls": [
+    {
+      "control": "CTRL_B3_wrong_side_of_2",
+      "optimized": false,
+      "returncode": 1,
+      "elapsed_seconds": 0.16641345794778317,
+      "log_sha256": "dccf4f3dab8ae72c41a6f68e82d7480168c539babbbf8bc1577778569feaddcb"
+    },
+    {
+      "control": "CTRL_B4_wrong_side_of_2",
+      "optimized": false,
+      "returncode": 1,
+      "elapsed_seconds": 0.13615245802793652,
+      "log_sha256": "22d5da24cfdd5120790bfb2c772aaa545ea1063b56fa610c0baadd28c57567df"
+    },
+    {
+      "control": "CTRL_B1_past_pstar",
+      "optimized": false,
+      "returncode": 1,
+      "elapsed_seconds": 0.1285086659481749,
+      "log_sha256": "73a30a8ffcc4790edcfdec536cb9c789033fb1ffde78bdc55cfb783ce2920c45"
+    },
+    {
+      "control": "CTRL_B3_overshoot",
+      "optimized": false,
+      "returncode": 1,
+      "elapsed_seconds": 3.2275631250813603,
+      "log_sha256": "ada3b3b6a790b63cb6f8373d92ac439592804a731ea28d377869816eebfd0f1b"
+    },
+    {
+      "control": "CTRL_B3_wrong_side_of_2",
+      "optimized": true,
+      "returncode": 1,
+      "elapsed_seconds": 0.16460666700731963,
+      "log_sha256": "dccf4f3dab8ae72c41a6f68e82d7480168c539babbbf8bc1577778569feaddcb"
+    },
+    {
+      "control": "CTRL_B4_wrong_side_of_2",
+      "optimized": true,
+      "returncode": 1,
+      "elapsed_seconds": 0.12870770902372897,
+      "log_sha256": "22d5da24cfdd5120790bfb2c772aaa545ea1063b56fa610c0baadd28c57567df"
+    },
+    {
+      "control": "CTRL_B1_past_pstar",
+      "optimized": true,
+      "returncode": 1,
+      "elapsed_seconds": 0.13092104194220155,
+      "log_sha256": "73a30a8ffcc4790edcfdec536cb9c789033fb1ffde78bdc55cfb783ce2920c45"
+    },
+    {
+      "control": "CTRL_B3_overshoot",
+      "optimized": true,
+      "returncode": 1,
+      "elapsed_seconds": 3.3265742919174954,
+      "log_sha256": "72166b45c2d39452574f7a150f22697071c5a6a2e626754610358f8ec65d6f02"
+    }
+  ],
+  "invalid_or_overwrite_requests_rejected": 18,
+  "raw_receipt_sha256": {
+    "tests-final-receipt.json": "ead7d6b2f48aeecd2cc7ebb5cbdad45aa8833374a72b3eb26e51c223f807c1f1",
+    "negative-control-receipt.json": "168342dda990159a83af208bc9f831fbf752b6d081ee745a0e995ea1647ce7e8",
+    "invalid-input-receipt.json": "7691373f055074b9ac49bdcb28b2f9fb904b362a95a857c7123b08ff7bbb130e"
+  },
+  "scope": "Six regression methods per mode include all eleven actual certificates and per-certificate mutations. Raw logs are privately retained. No independent reimplementation claim."
+}

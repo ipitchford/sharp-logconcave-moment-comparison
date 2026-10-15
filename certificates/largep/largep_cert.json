@@ -1,0 +1,121 @@
+{
+  "certificate": "MRTT cycle42 LARGE-P (Lemma LP, largep.md)",
+  "claim": "For all p >= 7 and s in [0,1/2]: M(s,p) <= N(s)^{p/2} F(p), strict for s>0.",
+  "proof_type": "analytic; PART A certifies the numerical constants of Step 7",
+  "script": "largep_certify.py",
+  "script_sha256": "5256760380705875ebacfbbdb9970b74079c14c464a0bd82c4625a0f10b8b7e5",
+  "python_flint": "0.9.0",
+  "arb_prec_bits": 320,
+  "part_A_constants": {
+    "e_upper": "87/32",
+    "e_minus_2_upper": "23/32",
+    "kappa_lower(p>=7)": "1/16",
+    "Gamma(p+1) >= 720 p for p >= 7": "Gamma increasing on [2,inf), Gamma(7)=720",
+    "K(p) >= (45 - 87/64) p - 2001/8192": {
+      "K_lin": "2793/64",
+      "const": "2001/8192"
+    },
+    "K_lower_at_p=7": "2500527/8192",
+    "K_lower_at_p=7_float": 305.2401123046875
+  },
+  "part_B_audit": {
+    "note": "audit only, not used by the proof",
+    "reference_values_checked": 9,
+    "grid": {
+      "p": [
+        "7",
+        "15/2",
+        "8",
+        "10",
+        "12",
+        "20",
+        "50",
+        "100",
+        "1000"
+      ],
+      "tau": "k/64, k=1..64"
+    },
+    "checks": [
+      "S==S2 (rel 1e-40)",
+      "S>0",
+      "S-Delta==e*tau*jensen_gap (rel 1e-40)",
+      "jensen_gap>0 (tau<1)",
+      "jensen_gap==0 (tau=1)",
+      "Delta>tau^2K",
+      "tau^2K>0",
+      "G(s,p)<G0(p)"
+    ],
+    "rows": [
+      {
+        "p": "7",
+        "n_tau": 64,
+        "K(p)_mid": "312.6794030",
+        "min_over_grid(tau^2 K / S)": 0.0036085826353128305,
+        "argmin_tau": "1"
+      },
+      {
+        "p": "15/2",
+        "n_tau": 64,
+        "K(p)_mid": "4391.188319",
+        "min_over_grid(tau^2 K / S)": 0.01457141802398517,
+        "argmin_tau": "1"
+      },
+      {
+        "p": "8",
+        "n_tau": 64,
+        "K(p)_mid": "22709.38156",
+        "min_over_grid(tau^2 K / S)": 0.02120298312531287,
+        "argmin_tau": "1"
+      },
+      {
+        "p": "10",
+        "n_tau": 64,
+        "K(p)_mid": "5673386.751",
+        "min_over_grid(tau^2 K / S)": 0.02669640458451012,
+        "argmin_tau": "1"
+      },
+      {
+        "p": "12",
+        "n_tau": 64,
+        "K(p)_mid": "1.227890096e+9",
+        "min_over_grid(tau^2 K / S)": 0.02091517984309667,
+        "argmin_tau": "1"
+      },
+      {
+        "p": "20",
+        "n_tau": 64,
+        "K(p)_mid": "1.596819746e+19",
+        "min_over_grid(tau^2 K / S)": 0.003213332925822272,
+        "argmin_tau": "1"
+      },
+      {
+        "p": "50",
+        "n_tau": 64,
+        "K(p)_mid": "6.558323627e+65",
+        "min_over_grid(tau^2 K / S)": 3.213202668720483e-07,
+        "argmin_tau": "1"
+      },
+      {
+        "p": "100",
+        "n_tau": 64,
+        "K(p)_mid": "4.345589292e+159",
+        "min_over_grid(tau^2 K / S)": 2.0678319653502985e-14,
+        "argmin_tau": "1"
+      },
+      {
+        "p": "1000",
+        "n_tau": 64,
+        "K(p)_mid": "1.998108006e+2570",
+        "min_over_grid(tau^2 K / S)": 7.58484849234401e-149,
+        "argmin_tau": "1"
+      }
+    ]
+  },
+  "part_C_negative_control": {
+    "6": "failed as expected: tau^2 K > 0 fails at tau=1/64, p=6",
+    "34/5": "failed as expected: tau^2 K > 0 fails at tau=1/64, p=34/5",
+    "K(6.8)": "-130.24679",
+    "K(6.9)": "48.487198"
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,244 @@
+{
+  "kind": "portable-summary-of-actual-same-code-replay",
+  "status": "PASS",
+  "independent_reimplementation": false,
+  "environment": {
+    "python_flint": "0.9.0",
+    "FLINT": "3.6.0",
+    "Arb": "integrated in FLINT; separate Arb version not exposed",
+    "bound_encoding": "exact rational strings (dyadic Arb endpoints)"
+  },
+  "python": "3.11.14 (main, Feb 12 2026, 00:41:29) [Clang 21.1.4 ]",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "optimized": false,
+  "started": "2026-10-15T20:56:17.355917+00:00",
+  "finished": "2026-10-15T20:58:15.157026+00:00",
+  "input_sha256": {
+    "code/certificate_io.py": "94f933053527911d1d6430527d4f3e15f2191294448e244822e54b2b2338b295",
+    "code/replay.py": "27837eba1a2625ec04368ee0ede88cbdaa2a53628a65de6b11b98b0525c00f0f",
+    "code/reproduce.sh": "c38b6dc82e4c644a8073cb94bb6f1ab265a959ec3aefffef4acc69cb17f6bfe5",
+    "code/bulk/bulk_cert.py": "126c51cf425c2ef367263c312e88328a486d092bd87ac90eabbe6647999a8fa3",
+    "code/bulk/crossing_cert.py": "2d4441cf9f322cfd99709f823557a1f024a866a3a417b8a664b9ae5ec5b7cfec",
+    "code/bulk/check_formulas.py": "bff241921d0cb8151a4d7d7ae985ee17c5291abbd25313bc268cee4cd0464ebd",
+    "code/strip/mpref.py": "03efc43f3d442367b3810a3f5852bf1d3b0f21791670c8903cb30fcdd9242abd",
+    "code/strip/strip_sample_check.py": "802ecd707a15b6d3bf287e425dc645fdb12c4b5caa6f6f1ec759dc960027ff89",
+    "code/strip/strip_fdcheck.py": "1c4fbafccf8ec87710a21504ebe0ba45015a1b198dfcfba1b167638c4cb20763",
+    "code/strip/strip_cert.py": "fcf2310cce902d57fb22a381b266e86fab6a7dee80c14de7a6f8deefaf48b333",
+    "code/local/formula_check.py": "3eeb5ffaf712eec88635604a466df4ecee942b768d90b425adba743fbfdefc46",
+    "code/local/local_cert.py": "5a82467edbf353bc90b6c4da26d2ab00f01f6745576d7df2555f89a106522132",
+    "code/largep/largep_numeric_scan.py": "d6fe23b2eeb8a4a5cefc1694def84957bb7cf2544c7c69e0a05dddbc177aebb3",
+    "code/largep/largep_certify.py": "5256760380705875ebacfbbdb9970b74079c14c464a0bd82c4625a0f10b8b7e5",
+    "checks/reduction_check.py": "c74a936debbf1eef248bedcfdb9fe8be141fab27066be9e92a01b3798396d51d",
+    "checks/tsystem_check.py": "fd27d56566bbb6f3d4b1d1f8ba0553797b6d0ab1d2ccfd63c243cc083c96beee",
+    "checks/test_certificates.py": "9b1ce16c0483aa38e9973d5ebeab38337cd60bca7354109ba4f8fc004c509273"
+  },
+  "runs": [
+    {
+      "name": "B1",
+      "portable_command": [
+        "python",
+        "-B",
+        "code/bulk/bulk_cert.py",
+        "B1",
+        "--out",
+        "NEW_OUTPUT/B1.json"
+      ],
+      "started": "2026-10-15T20:56:17.356317+00:00",
+      "elapsed_seconds": 1.4453755000140518,
+      "returncode": 0,
+      "semantic_error": null,
+      "certificate_sha256": "28fdec388c6f01f9fc26f678c69e4ab454e21ab995648657935839c838918113",
+      "stdout_sha256": "28fdec388c6f01f9fc26f678c69e4ab454e21ab995648657935839c838918113",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "B2",
+      "portable_command": [
+        "python",
+        "-B",
+        "code/bulk/bulk_cert.py",
+        "B2",
+        "--out",
+        "NEW_OUTPUT/B2.json"
+      ],
+      "started": "2026-10-15T20:56:18.801834+00:00",
+      "elapsed_seconds": 1.2578182499855757,
+      "returncode": 0,
+      "semantic_error": null,
+      "certificate_sha256": "2e0833b2e062792b1ca64f9f99bb92a4cb52defe09b627508349f06583fc8256",
+      "stdout_sha256": "2e0833b2e062792b1ca64f9f99bb92a4cb52defe09b627508349f06583fc8256",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "B3",
+      "portable_command": [
+        "python",
+        "-B",
+        "code/bulk/bulk_cert.py",
+        "B3",
+        "--out",
+        "NEW_OUTPUT/B3.json"
+      ],
+      "started": "2026-10-15T20:56:20.059789+00:00",
+      "elapsed_seconds": 5.246623000013642,
+      "returncode": 0,
+      "semantic_error": null,
+      "certificate_sha256": "aa708d59730f01113005012b032d9659a89b7329e960e6e3be30acb5a46d85a3",
+      "stdout_sha256": "aa708d59730f01113005012b032d9659a89b7329e960e6e3be30acb5a46d85a3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "B4",
+      "portable_command": [
+        "python",
+        "-B",
+        "code/bulk/bulk_cert.py",
+        "B4",
+        "--out",
+        "NEW_OUTPUT/B4.json"
+      ],
+      "started": "2026-10-15T20:56:25.306590+00:00",
+      "elapsed_seconds": 10.219308667001314,
+      "returncode": 0,
+      "semantic_error": null,
+      "certificate_sha256": "af1d35508b25612fa38a8b96d799708cb43040a6a227cfeca1fde21803bcc40f",
+      "stdout_sha256": "af1d35508b25612fa38a8b96d799708cb43040a6a227cfeca1fde21803bcc40f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "X",
+      "portable_command": [
+        "python",
+        "-B",
+        "code/bulk/crossing_cert.py",
+        "--out",
+        "NEW_OUTPUT/X.json"
+      ],
+      "started": "2026-10-15T20:56:35.526089+00:00",
+      "elapsed_seconds": 0.10523537499830127,
+      "returncode": 0,
+      "semantic_error": null,
+      "certificate_sha256": "dd729b4975c0de17dbde089cbd943bd3cf04eb17fd29b68dea80919e1b313cfc",
+      "stdout_sha256": "dd729b4975c0de17dbde089cbd943bd3cf04eb17fd29b68dea80919e1b313cfc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "L1",
+      "portable_command": [
+        "python",
+        "-B",
+        "code/local/local_cert.py",
+        "L1",
+        "--threshold",
+        "6/125",
+        "--out",
+        "NEW_OUTPUT/L1.json"
+      ],
+      "started": "2026-10-15T20:56:35.631446+00:00",
+      "elapsed_seconds": 10.219898040988483,
+      "returncode": 0,
+      "semantic_error": null,
+      "certificate_sha256": "2b535a5ba37d5e15b819526bdc3fd1193bffc52e72b598a971512d80fda85a62",
+      "stdout_sha256": "4407ae1c85fdff6ab8b5ae26fa5a32d1f688cec5335589bf5ce773beee02b06c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "L2",
+      "portable_command": [
+        "python",
+        "-B",
+        "code/local/local_cert.py",
+        "L2",
+        "--threshold",
+        "29/2000",
+        "--out",
+        "NEW_OUTPUT/L2.json"
+      ],
+      "started": "2026-10-15T20:56:45.851471+00:00",
+      "elapsed_seconds": 59.166591292014346,
+      "returncode": 0,
+      "semantic_error": null,
+      "certificate_sha256": "3c349d9468995a8117d802b7f500ea2fa72f13b322f6b0ccffd0f411b189f575",
+      "stdout_sha256": "0a30907a09153a76083aadd35647d047b417fb3579e9097099bee6386d0a2772",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "L3",
+      "portable_command": [
+        "python",
+        "-B",
+        "code/local/local_cert.py",
+        "L3",
+        "--threshold",
+        "31/2000",
+        "--out",
+        "NEW_OUTPUT/L3.json"
+      ],
+      "started": "2026-10-15T20:57:45.018285+00:00",
+      "elapsed_seconds": 25.096763625042513,
+      "returncode": 0,
+      "semantic_error": null,
+      "certificate_sha256": "bde3c2995207598d27f01d317019584ca67d9e5a7ad9d2836cee75baeb7d4ad9",
+      "stdout_sha256": "86ff50bab7d64622f49fd82d743ddafd5933c4deaf4b02cff268a7782ee92e4a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "S1",
+      "portable_command": [
+        "python",
+        "-B",
+        "code/strip/strip_cert.py",
+        "--lemma",
+        "S1",
+        "--out",
+        "NEW_OUTPUT/S1.json"
+      ],
+      "started": "2026-10-15T20:58:10.115278+00:00",
+      "elapsed_seconds": 3.6975759170018137,
+      "returncode": 0,
+      "semantic_error": null,
+      "certificate_sha256": "cbec8e0fb1a2cc7f69844bd9990708b8a8319fbeff06e92e90da53d262083cd4",
+      "stdout_sha256": "2cb7e79f344cd064444a1a0ee3a23c30e6350c1d2b268572101343ba1f856628",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "S2",
+      "portable_command": [
+        "python",
+        "-B",
+        "code/strip/strip_cert.py",
+        "--lemma",
+        "S2",
+        "--out",
+        "NEW_OUTPUT/S2.json"
+      ],
+      "started": "2026-10-15T20:58:13.813092+00:00",
+      "elapsed_seconds": 1.100725083029829,
+      "returncode": 0,
+      "semantic_error": null,
+      "certificate_sha256": "cea22fe726ff9d5431c3780a8ac627dce81329546a8ac563979986810fa578aa",
+      "stdout_sha256": "9c3d685c7e4d15f62c5ecdbefa111dfd5d3604f05a4ec4642af3b96d28e36e85",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "LP",
+      "portable_command": [
+        "python",
+        "-B",
+        "code/largep/largep_certify.py",
+        "--out",
+        "NEW_OUTPUT/LP.json"
+      ],
+      "started": "2026-10-15T20:58:14.913974+00:00",
+      "elapsed_seconds": 0.24291391600854695,
+      "returncode": 0,
+      "semantic_error": null,
+      "certificate_sha256": "5ffe1cb10d42ddb69b85f7f9e7d4f5be6346ba82f53dd46aa3412dea93cea729",
+      "stdout_sha256": "5ffe1cb10d42ddb69b85f7f9e7d4f5be6346ba82f53dd46aa3412dea93cea729",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "raw_receipt_sha256": "85ba0c527a7d8c23e9e7e28ca7e5a1d79f8557cac83224c1dd85c912d51037b5",
+  "raw_evidence": "Raw machine-path receipts and stdout/stderr are privately retained; hashes identify them, not public downloads.",
+  "command_note": "Commands above are portable equivalents; NEW_OUTPUT must be a fresh directory. Exact private commands are retained in raw evidence."
+}

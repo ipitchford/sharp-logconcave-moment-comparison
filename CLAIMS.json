@@ -1,0 +1,198 @@
+{
+  "schemaVersion": "1.0",
+  "title": "Sharp Lp–L2 moment comparison for centred log-concave random variables, with equality cases",
+  "creator": "Anonymous",
+  "status": "unrefereed-candidate-internal-replay",
+  "admissibleClass": "Nondegenerate mean-zero real random variables with log-concave density; bounded and half-line supports allowed.",
+  "definitions": {
+    "E": "Standard exponential, mean 1",
+    "Ep": "Independent copy of E",
+    "L": "E-Ep",
+    "F": "F(p)=E|E-1|^p",
+    "Z": "Z_s=s(E-1)-(1-s)(Ep-1)",
+    "G": "G(s,p)=log(E|Z_s|^p)/p-log(s^2+(1-s)^2)/2",
+    "pStar": "Unique root in (1,2) of Gamma(p+1)^(1/p)/sqrt(2)=F(p)^(1/p)"
+  },
+  "claimCeiling": [
+    "Current-source normal and optimised macOS replay passed; frozen-extraction and Linux outcomes recorded separately in release checks",
+    "No irrationality assertion for pStar",
+    "Exactly two families at transition modulo scaling and reflection",
+    "All admissible laws are extremal at p=2",
+    "No priority claim for Eitan real-exponent reduction or crossing method",
+    "No general two-exponent solution",
+    "Qualitative fixed-p stability only; no explicit rate or uniformity through pStar or 2"
+  ],
+  "claims": [
+    {
+      "id": "sharp-low",
+      "statement": "For 1<p<pStar, inf ||X||p/||X||2=Gamma(p+1)^(1/p)/sqrt(2), with equality exactly for positive multiples of L.",
+      "locator": "paper.tex: thm:main, thm:U, sec:assembly, lem:S",
+      "kind": "computer-assisted-theorem",
+      "dependencies": [
+        "reduction",
+        "local",
+        "strip",
+        "crossing",
+        "bulk"
+      ]
+    },
+    {
+      "id": "transition",
+      "statement": "At p=pStar the endpoint constants coincide; equality consists exactly of multiples of L and signed multiples of E-1, two families modulo scaling/reflection.",
+      "locator": "paper.tex: thm:U, lem:S",
+      "kind": "computer-assisted-theorem",
+      "dependencies": [
+        "reduction",
+        "crossing",
+        "local",
+        "bulk"
+      ]
+    },
+    {
+      "id": "sharp-middle",
+      "statement": "For pStar<p<2, inf ||X||p/||X||2=F(p)^(1/p), with equality exactly for signed positive multiples of E-1.",
+      "locator": "paper.tex: thm:main, thm:U",
+      "kind": "computer-assisted-theorem",
+      "dependencies": [
+        "reduction",
+        "local",
+        "strip",
+        "crossing",
+        "bulk"
+      ]
+    },
+    {
+      "id": "p-two",
+      "statement": "At p=2 the ratio is 1 for every admissible law.",
+      "locator": "paper.tex: sec:strip and abstract",
+      "kind": "identity",
+      "dependencies": []
+    },
+    {
+      "id": "sharp-high",
+      "statement": "For p>2, sup ||X||p/||X||2=F(p)^(1/p), with equality exactly for signed positive multiples of E-1.",
+      "locator": "paper.tex: thm:main, thm:U",
+      "kind": "computer-assisted-theorem",
+      "dependencies": [
+        "reduction",
+        "local",
+        "strip",
+        "bulk",
+        "large-p"
+      ]
+    },
+    {
+      "id": "reduction",
+      "statement": "Equality-sensitive reduction for real 1<a<b to scaled Z_s; follows established Eitan reduction and crossing-method lineage.",
+      "locator": "paper.tex: thm:R2, thm:R1 and lemmas A-G",
+      "kind": "analytic-proof-of-established-reduction",
+      "dependencies": []
+    },
+    {
+      "id": "large-p",
+      "statement": "For real p>=7 and 0<s<=1/2, N(s)^(p/2)F(p)-M(s,p)>0 by explicit K(p)>0.",
+      "locator": "paper.tex: prop:largep",
+      "kind": "analytic-proof",
+      "dependencies": [],
+      "supportingCode": "code/largep/largep_certify.py"
+    },
+    {
+      "id": "local",
+      "statement": "G_ss>6/125 on [9/20,1/2]x(1,7/4]; G_ss>29/2000 on [0,1/20]x[8/5,39/20]; G_ss<-31/2000 on [0,1/20]x[41/20,7].",
+      "locator": "paper.tex: prop:local",
+      "kind": "interval-proof-obligation",
+      "dependencies": [],
+      "code": "code/local/local_cert.py",
+      "certificates": [
+        "certificates/local/cert_L1.json",
+        "certificates/local/cert_L2.json",
+        "certificates/local/cert_L3.json"
+      ],
+      "currentReplay": "passed-normal-and-optimized-macos-exact-source-binding"
+    },
+    {
+      "id": "strip",
+      "statement": "d_p(G-G_0)<0 on [1/20,1/2]x[39/20,41/20]; d_p G_ss<0 on [0,1/20]x[39/20,41/20].",
+      "locator": "paper.tex: prop:strip",
+      "kind": "interval-proof-obligation",
+      "dependencies": [],
+      "code": "code/strip/strip_cert.py",
+      "certificates": [
+        "certificates/strip/S1_cert.json",
+        "certificates/strip/S2_cert.json"
+      ],
+      "currentReplay": "passed-normal-and-optimized-macos-exact-source-binding"
+    },
+    {
+      "id": "crossing",
+      "statement": "H=G_0-G_h>0 on [1,1.682457208], H<0 on [1.682457209,39/20], H'<-0.016 between the two exact decimal endpoints.",
+      "locator": "paper.tex: prop:crossing",
+      "kind": "interval-proof-obligation",
+      "dependencies": [],
+      "code": "code/bulk/crossing_cert.py",
+      "certificates": [
+        "certificates/bulk/cert_X.json"
+      ],
+      "currentReplay": "passed-normal-and-optimized-macos-exact-source-binding",
+      "limitations": [
+        "Refined rounded historical root display is not an exact bracket",
+        "No irrationality inference"
+      ]
+    },
+    {
+      "id": "bulk",
+      "statement": "With eta=1/20, B1: G>G_h on [0,9/20]x[1,pStarHi-eta]; B2: G>min(G_0,G_h) on [1/20,9/20]x[pStarLo-eta,pStarHi+eta]; B3: G>G_0 on [1/20,1/2]x[pStarLo+eta,39/20]; B4: G<G_0 on [1/20,1/2]x[41/20,7]. Here pStarLo=1.682457208 and pStarHi=1.682457209 exactly.",
+      "locator": "paper.tex: prop:bulk",
+      "kind": "interval-proof-obligation",
+      "dependencies": [],
+      "code": "code/bulk/bulk_cert.py",
+      "certificates": [
+        "certificates/bulk/cert_B1.json",
+        "certificates/bulk/cert_B2.json",
+        "certificates/bulk/cert_B3.json",
+        "certificates/bulk/cert_B4.json"
+      ],
+      "currentReplay": "passed-normal-and-optimized-macos-exact-source-binding"
+    },
+    {
+      "id": "qualitative-stability",
+      "statement": "For mean-zero variance-one log-concave laws mu, each fixed p>1 with p!=2 and each finite q>=1 admits a finite nondecreasing modulus omega_pq(t)->0 as t->0, such that min over nu in A_p of [TV(mu,nu)+W_q(mu,nu)] <= omega_pq(Delta_p(mu)).",
+      "locator": "paper.tex: sec:stability, cor:distributional-stability",
+      "kind": "analytic-corollary-of-computer-assisted-equality-theorem",
+      "definitions": {
+        "Delta": "log(||X||p/m_p) for 1<p<2; log(M_p/||X||p) for p>2",
+        "A": "Law((E-Ep)/sqrt(2)) for 1<p<pStar; all three oriented variance-one laws at pStar; Law(E-1) and Law(1-E) for pStar<p<2 or p>2"
+      },
+      "dependencies": [
+        "sharp-low",
+        "transition",
+        "sharp-middle",
+        "sharp-high"
+      ],
+      "uniformity": "One modulus on each nonempty compact subset of (1,pStar), (pStar,2) or (2,infinity).",
+      "limitations": [
+        "No explicit deficit-to-distance rate",
+        "No uniform modulus through pStar or 2 with exact exponent-dependent equality sets",
+        "At pStar the target contains three oriented laws but two families modulo reflection",
+        "Standard compactness method, not claimed novel"
+      ],
+      "sourceDependencies": [
+        "paper.tex bibliography SW: marginalisation, weak closure, density existence",
+        "paper.tex bibliography CS Proposition 2: total-variation convergence"
+      ]
+    }
+  ],
+  "version": "1.0.0-candidate",
+  "doi": "10.5281/zenodo.23405173",
+  "doiStatus": "reserved",
+  "intendedRepository": "https://github.com/ipitchford/sharp-logconcave-moment-comparison",
+  "replayEvidence": {
+    "normalReceiptSha256": "85ba0c527a7d8c23e9e7e28ca7e5a1d79f8557cac83224c1dd85c912d51037b5",
+    "optimizedReceiptSha256": "f38690d3650bbfb31f69590d837a83a6802924aa7c7a028cf1ae83f1a776a5f0",
+    "productionPassesPerMode": 11,
+    "regressionRunsPassed": 2,
+    "falseControlsRejected": 8,
+    "invalidRequestsRejected": 18,
+    "scope": "Same-code macOS replay, not independent reimplementation; final frozen payload not yet verified"
+  }
+}

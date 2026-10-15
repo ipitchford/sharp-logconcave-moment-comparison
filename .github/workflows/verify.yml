@@ -1,0 +1,63 @@
+name: Certificate replay
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        mode: [normal, optimized]
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check complete payload manifest
+        run: python -B checks/check_manifest.py
+      - name: Install pinned production dependency
+        run: python -m pip install -r requirements.txt
+      - name: Replay all eleven certificates and regression tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          OUT="$RUNNER_TEMP/mrtt-${{ matrix.mode }}"
+          FLAGS=(-B)
+          REPLAY_FLAGS=()
+          if [ '${{ matrix.mode }}' = optimized ]; then
+            FLAGS+=(-O)
+            REPLAY_FLAGS+=(--optimized)
+          fi
+          python "${FLAGS[@]}" code/replay.py --out "$OUT" "${REPLAY_FLAGS[@]}"
+          python "${FLAGS[@]}" checks/test_certificates.py "$OUT" 2>&1 | tee "$OUT/regression-tests.log"
+      - name: Reject all four false bulk controls
+        shell: bash
+        run: |
+          set -euo pipefail
+          OUT="$RUNNER_TEMP/mrtt-${{ matrix.mode }}"
+          FLAGS=(-B)
+          if [ '${{ matrix.mode }}' = optimized ]; then FLAGS+=(-O); fi
+          for control in CTRL_B3_wrong_side_of_2 CTRL_B4_wrong_side_of_2 CTRL_B1_past_pstar CTRL_B3_overshoot; do
+            status=0
+            python "${FLAGS[@]}" code/bulk/bulk_cert.py "$control" > "$OUT/$control.log" 2>&1 || status=$?
+            if [ "$status" -ne 1 ]; then
+              echo "Control $control expected rejection exit 1, got $status"
+              exit 1
+            fi
+          done
+      - name: Retain actual results even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: certificate-replay-${{ matrix.mode }}
+          path: ${{ runner.temp }}/mrtt-${{ matrix.mode }}/
+          if-no-files-found: warn
+          retention-days: 30

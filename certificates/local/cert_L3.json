@@ -1,0 +1,61 @@
+{
+ "script": "local_cert.py",
+ "script_sha256": "5a82467edbf353bc90b6c4da26d2ab00f01f6745576d7df2555f89a106522132",
+ "python_flint": "0.9.0",
+ "arb_prec_bits": 128,
+ "python": "3.11.14",
+ "min_box_width": "1/4194304",
+ "started": "2026-10-15T21:57:45+0100",
+ "parameters": {
+  "s0": "0",
+  "s1": "1/20",
+  "p0": "41/20",
+  "p1": "7",
+  "mode": "small_s",
+  "sign": -1,
+  "threshold": "31/2000",
+  "initial_grid": [
+   5,
+   100
+  ],
+  "split_weights": [
+   4,
+   1
+  ]
+ },
+ "selftest": "PASS",
+ "result": {
+  "region": "L3",
+  "s_range": [
+   "0",
+   "1/20"
+  ],
+  "p_range": [
+   "41/20",
+   "7"
+  ],
+  "mode": "small_s",
+  "claim": "d2G/ds2 < -31/2000",
+  "threshold": "31/2000",
+  "boxes_evaluated": 57496,
+  "leaves": 28998,
+  "failures": 0,
+  "failed_boxes": [],
+  "coverage_area_ok": true,
+  "min_certified_abs_Gss": "2637189926476250496432514791311228797/170141183460469231731687303715884105728",
+  "worst_leaf": [
+   "71/5120",
+   "89/6400",
+   "2099299/1024000",
+   "1049699/512000",
+   [
+    "-2814195413522302135587036961323695997/170141183460469231731687303715884105728",
+    "-2637189926476250496432514791311228797/170141183460469231731687303715884105728"
+   ]
+  ],
+  "bound_encoding": "exact rational strings",
+  "leaves_sha256": "0fc9396187d55d3fe0719f97e72da6b1de5d9d3974fbc0670d4df8732404bc34",
+  "runtime_s": 24.5
+ },
+ "status": "PASS"
+}

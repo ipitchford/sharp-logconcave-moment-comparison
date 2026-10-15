@@ -1,0 +1,63 @@
+{
+ "lemma": "X (crossing)",
+ "status": "CERTIFIED",
+ "pstar_lo": "210307151/125000000",
+ "pstar_hi": "1682457209/1000000000",
+ "pstar_lo_decimal": "1.682457208",
+ "pstar_hi_decimal": "1.682457209",
+ "X1": {
+  "interval": [
+   "1",
+   "210307151/125000000"
+  ],
+  "claim": "H > 0",
+  "boxes_evaluated": 73,
+  "leaves": 37,
+  "failures": 0,
+  "failure_boxes": [],
+  "min_certified_margin": "2379699349916038127878037035/680564733841876926926749214863536422912",
+  "min_margin_box": [
+   "110261430276337/65536000000000",
+   "210307151/125000000"
+  ]
+ },
+ "X2": {
+  "interval": [
+   "1682457209/1000000000",
+   "39/20"
+  ],
+  "claim": "H < 0",
+  "boxes_evaluated": 65,
+  "leaves": 33,
+  "failures": 0,
+  "failure_boxes": [],
+  "min_certified_margin": "4374990038305320386642991137/680564733841876926926749214863536422912",
+  "min_margin_box": [
+   "1682457209/1000000000",
+   "441046330138887/262144000000000"
+  ]
+ },
+ "X3": {
+  "interval": [
+   "210307151/125000000",
+   "1682457209/1000000000"
+  ],
+  "claim": "H' < 0",
+  "boxes_evaluated": 1,
+  "failures": 0,
+  "max_certified_upper_bound_of_H'": "-18491421096914275/1152921504606846976",
+  "enclosure_on_whole_interval": "[-0.01603876 +/- 8.86e-9]"
+ },
+ "pstar_refined_bracket": [
+  "369976252786399737873/219902325555200000000",
+  "924940631965999344683/549755813888000000000"
+ ],
+ "bound_encoding": "exact rational strings",
+ "consequence": "H has a unique zero p* in [1, 39/20]; PSTAR_LO < p* < PSTAR_HI; Gh - G0 > 0 on [p*+1/20, 39/20]",
+ "runtime_s": 0.01,
+ "flint_version": "0.9.0",
+ "arb_precision_bits": 128,
+ "python": "3.11.14",
+ "script": "crossing_cert.py",
+ "script_sha256": "2d4441cf9f322cfd99709f823557a1f024a866a3a417b8a664b9ae5ec5b7cfec"
+}
